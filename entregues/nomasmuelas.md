@@ -1,5 +1,5 @@
 # Me lo quedo
-Intento de función del juego del dado
+Intento de función del juego del dado, el contador de mi algoritmo es para que no se repita mas de una vez y asi no dar demasiados puntos a mi querido compañero de clase y rival en cuestión.
 
 ```
 create function dbo.melsquedo(@nºjugador int, @puntuacionT int)

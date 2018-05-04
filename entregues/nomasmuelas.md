@@ -1,7 +1,8 @@
 # Me lo quedo
 Intento de función del juego del dado
 
-```create function dbo.melsquedo(@nºjugador int, @puntuacionT int)
+```
+create function dbo.melsquedo(@nºjugador int, @puntuacionT int)
 RETURNS bit
 AS
 BEGIN

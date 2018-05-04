@@ -14,7 +14,7 @@ BEGIN
 		select  @puntsmios = puntsAnotats from marcador where nJugadorAnota = @nºjugador;
 		select @puntsmios2 = puntsAnotats from marcador where nJugadorAnota != @nºjugador;
 		if (@puntsmios - @puntsmios2 <5)
-		 begin
+		begin
 				set @boolean=0
 				set @contador+=1
 		end else begin

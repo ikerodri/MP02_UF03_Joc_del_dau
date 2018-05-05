@@ -1,6 +1,8 @@
 # Competència T-SQL Datum.
+## Participa fent el teu Pull Request.
+## [Dilluns dia 7 a les 18:00 la gran final](https://challonge.com/basededades).
 
-Aquesta pràctica està basada en la [competència de bits en ring **'Datum'**](http://bitsenelring.blogspot.com.es/2013/06/nueva-competencia-datum.html):
+Aquesta prova està basada en la [competència de bits en ring **'Datum'**](http://bitsenelring.blogspot.com.es/2013/06/nueva-competencia-datum.html):
 
 >**Reglas del juego**
 >
@@ -44,8 +46,6 @@ create table Marcador (
 
 La regla adicional ens diu que és obligatori fer algun tipus de consulta a aquesta taula dins la funció.
 
-# Participa fent el teu Pull Request.
-## [Dilluns dia 7 a les 18:00 la gran final](https://challonge.com/basededades) 
 
 **Com competiran els algoritmes entre si?**
 

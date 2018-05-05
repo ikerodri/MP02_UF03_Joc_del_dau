@@ -1,4 +1,4 @@
-# Entrega de la pràctica T-SQL Datum.
+# Competència T-SQL Datum.
 
 Aquesta pràctica està basada en la [competència de bits en ring **'Datum'**](http://bitsenelring.blogspot.com.es/2013/06/nueva-competencia-datum.html):
 
@@ -12,16 +12,16 @@ Aquesta pràctica està basada en la [competència de bits en ring **'Datum'**](
 >
 >Esto se repite una y otra vez (cambiando o no de turno, según las decisiones de los jugadores), hasta que uno de los jugadores llega a 30 puntos o más, y es declarado ganador.
 
-Al nostre cas no es traca d'arribar a trenta sinó d'acumular més punts en 10K tirades del dau entre els dos contrincants.
+Al nostre cas no es traca d'arribar a trenta sinó d'acumular més punts en 10K tirades del dau.
 
-Per participar cal entregar una funció T-SQl a la carpeta [entregues](./entregues) mitjançant un Pull Request.
+Per participar cal entregar una funció T-SQL a la carpeta [entregues](./entregues) mitjançant un Pull Request.
 
 **Requeriments de l'entrega:**
 
 * **Format:** El Pull Request ha de ser un fitxer amb extensió `.MD`. Ha de tenir un títol amb el nom de l'algorisme, una descripció de com actua i un code bloc amb el codi T-SQL de la funció ( incloent el `CREATE FUNCTION` ).
 * **La Funció:** Rep dos paràmetres: Quin número de jugador sóc i quina puntuació ha sortit al dau. Ha de retornar un valor de tipus `bit`. Un `1` vol dir que es queda amb els punts, un `0` vol dir que no els vol.
 
-Exemple de funció:
+Exemple de funció (no vàlida perquè no compleix la regla adicional explicada a continuació):
 
 ```
 create function dbo.mElsQuedo( nJugador int, punts int ) returns bit as
@@ -42,9 +42,10 @@ create table Marcador (
 )
 ```
 
-És obligatori fer algun tipus de consulta a aquesta taula dins la funció.
+La regla adicional ens diu que és obligatori fer algun tipus de consulta a aquesta taula dins la funció.
 
-# [Dilluns dia 7 la gran final](https://challonge.com/basededades) Participa fent el teu Pull Request.
+# Participa fent el teu Pull Request.
+## [Dilluns dia 7 a les 18:00 la gran final](https://challonge.com/basededades) 
 
 **Com competiran els algoritmes entre si?**
 

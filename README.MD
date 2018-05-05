@@ -26,7 +26,7 @@ Per participar cal entregar una funció T-SQL a la carpeta [entregues](./entregu
 Exemple de funció (no vàlida perquè no compleix la regla adicional explicada a continuació):
 
 ```
-create function dbo.mElsQuedo( nJugador int, punts int ) returns bit as
+create function dbo.mElsQuedo( @nJugador int, @punts int ) returns bit as
 begin
     return 1; -- Funció que sempre es queda els punts.
 end

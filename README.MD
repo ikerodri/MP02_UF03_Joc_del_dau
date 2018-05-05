@@ -10,9 +10,9 @@ Aquesta pràctica està basada en la [competència de bits en ring **'Datum'**](
 > * Pasar el turno al otro jugador, anotándose los puntos que indica el dado.
 > * Mantener el turno, pero anotarle al otro jugador los puntos que indica el dado.
 >
->Esto se repite una y otra vez (cambiando o no de turno, según las decisiones de los jugadores), hasta que uno de los jugadores llega a 30 puntos o más, y es declarado ganador.
+>Esto se repite una y otra vez (cambiando o no de turno, según las decisiones de los jugadores), ~~hasta que uno de los jugadores llega a 30 puntos o más y es declarado ganador.~~
 
-Al nostre cas no es traca d'arribar a trenta sinó d'acumular més punts en 10K tirades del dau.
+Al nostre cas no es traca d'arribar a 30 punts sinó d'acumular més punts en 10K tirades del dau.
 
 Per participar cal entregar una funció T-SQL a la carpeta [entregues](./entregues) mitjançant un Pull Request.
 
@@ -92,4 +92,11 @@ group by nJugadorAnota
 order by nJugadorAnota;
 ```
 
+**Premis**
+
+Al guanyador tots li farem :+1: al fitxer pujat al seu Pull Request.
+
+**Canvis de les regles**
+
+L'organització es permet variar les regles en casos excepcionals per a millorar l'experiència o fer-ho més just.
 

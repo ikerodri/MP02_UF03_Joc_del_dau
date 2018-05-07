@@ -9,8 +9,8 @@ create function dbo.mElsQuedo( @nJugador int, @punts int )
 returns bit
 as begin
 	declare @quedarme as bit, @mispuntos as int, @puntosadver as int
-	set @mispuntos=(select sum(puntsAnotats) from marcador where nJugadorAnota=@nJugador)
-	set @puntosadver=(select sum(puntsAnotats) from marcador where nJugadorAnota=@nJugador)
+	set @mispuntos=coalesce((select sum(puntsAnotats) from marcador where nJugadorAnota=@nJugador),0)
+	set @puntosadver=coalesce((select sum(puntsAnotats) from marcador where nJugadorAnota=@nJugador),0)
 	if @punts <=2
 		if @mispuntos<@puntosadver
 			set @quedarme=1

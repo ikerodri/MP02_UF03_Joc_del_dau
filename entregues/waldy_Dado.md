@@ -1,13 +1,21 @@
-#Juego del dado WSAsociados
+# Juego del dado WSAsociados
 go
-create function dbo.tirada (@dado int , @puntos int )
+create function dbo.dados(@njugador int , @punts int )
 returns bit
 as begin
-declare  @correcto bit ;
-set @correcto =  1
-begin 
-	if @puntos <3  return @correcto 	
-	else set @correcto = 0
-	end
-return @correcto
+declare @si bit;
+declare @puntosally int;
+declare @puntosenemy int;
+declare @diferencia int;
+
+set @puntosally =(select SUM (puntsanotats) from marcador
+				  where njugadoranota = 1)
+set @puntosenemy =(select SUM (puntsanotats) from marcador
+				  where njugadoranota = 2)
+
+set @diferencia = (@puntosally - @puntosenemy)
+
+if @puntosally > @puntosenemy and @diferencia > @punts set @si = 0
+else set @si = 1				
+return @si 
 end

@@ -1,4 +1,6 @@
 # Juego del dado WSAsociados
+
+```
 go
 create function dbo.dados(@njugador int , @punts int )
 returns bit

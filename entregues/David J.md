@@ -8,9 +8,9 @@ returns integer
 as begin
 	declare @sino int, @total_altre int, @total_jo int;
 	set @total_jo = 
-		(select sum(puntsanotats) from Marcador where nJugadorAnota = @nJugador );
+		coalesce ((select sum(puntsanotats) from Marcador where nJugadorAnota = @nJugador ),0);
 	set @total_altre = 
-		(select sum(puntsanotats) from Marcador where nJugadorAnota != @nJugador );
+		coalesce ((select sum(puntsanotats) from Marcador where nJugadorAnota != @nJugador ),0);
 
 	if @punts between 0 and 3
 		begin

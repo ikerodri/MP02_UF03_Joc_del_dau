@@ -10,9 +10,10 @@ declare @diferencia int;
 
 set @puntosaliados =(select SUM (puntsanotats) from marcador
 				  where njugadoranota = 1)
+				  
 set @puntosenemigos =(select SUM (puntsanotats) from marcador
 				  where njugadoranota = 2)
-
+				  
 set @diferencia = (@puntosaliados - @puntosenemigos)
 
 if @puntosaliados > @puntosenemigos and @diferencia > @punts set @si = 0

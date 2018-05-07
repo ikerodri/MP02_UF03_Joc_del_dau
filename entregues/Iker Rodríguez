@@ -1,6 +1,6 @@
 La meva funció, mira la puntuació del rival i en funció de si te més o menys punts es comporta d'una o altre forma.
 En cas de que vagi guanyant, la funció és menys exigent a l'hora de decidir si es queda un número o no que si va perdent:
-
+```
 create function dbo.mElsQuedo (
 @n_jugador as int,
 @punts as int)
@@ -50,3 +50,4 @@ as begin
 		end;
 	return @PaMi
 end;
+```

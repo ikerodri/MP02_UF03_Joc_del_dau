@@ -1,0 +1,52 @@
+La meva funció, mira els punts del rival, i en funció de si l'altre jugador va guanyant o perdent, fa una o altre cosa.
+En cas de que vagi guanyant la funció és menys exigent a l'hora de decidir si vol o no el número que quan vaig perdent.
+
+create function dbo.mElsQuedo (
+@n_jugador as int,
+@punts as int)
+returns integer
+as begin
+	declare @PaMi int, @misPuntos int, @susPuntos int --Si es para mi será 1 (true), sino será 0 (false)
+	set @misPuntos=(select sum(puntsAnotats) from Marcador where nJugadorAnota=@n_jugador);
+	set @susPuntos=(select sum(puntsAnotats) from Marcador where nJugadorAnota!=@n_jugador);
+	if @misPuntos>@susPuntos
+		begin
+			if @misPuntos<@susPuntos+@punts
+				begin
+					set @PaMi=1
+				end
+			else
+			begin
+				if @punts>3
+				begin
+					set @PaMi=1
+				end
+			else
+			begin
+				if @misPuntos>@susPuntos+@punts and @punts<3
+					begin
+						set @PaMi=0
+					end
+			else
+			begin
+				if @punts<2
+					begin
+						set @PaMi=0
+					end
+				end
+			end
+		end
+	end;
+	else 
+		begin
+			if @punts>2
+				begin
+					set @PaMi=1
+				end
+				else
+				begin
+					set @PaMi=0
+				end
+		end;
+	return @PaMi
+end;

@@ -1,6 +1,6 @@
 # Competència T-SQL Datum.
 ## Participa fent el teu Pull Request.
-## [Dilluns dia 7 a les 18:00 la gran final](https://challonge.com/basededades).
+## [Dilluns dia 7 a les 18:00 la gran final](https://challonge.com/basededades2).
 
 Aquesta prova està basada en la [competència de bits en ring **'Datum'**](http://bitsenelring.blogspot.com.es/2013/06/nueva-competencia-datum.html):
 
